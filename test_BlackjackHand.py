@@ -13,7 +13,8 @@ from Card import *
 
 # ----------------------------------------------------------------------
 
-class CardTest(unittest.TestCase):
+class BlackjackHandTest(unittest.TestCase):
+    #
 
     # ------------------------------------------------------------------
 
