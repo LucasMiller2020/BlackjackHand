@@ -1,7 +1,10 @@
+#!/usr/bin/env python3
+
+# ----------------------------------------------------------------------
+# Card.py
 # Lucas Miller
-# Due:  09-13-2022
-# Software Design
-# ----------------------
+# 10/10/2022
+# ----------------------------------------------------------------------
 
 from __future__ import annotations
 
@@ -10,10 +13,10 @@ from __future__ import annotations
 class InvalidCardError(Exception):
     pass
 
-
 # ----------------------------------------------------------------------
 
 class Card:
+
     """
     stores a card from a standard playing card deck of 52 cards
     """
@@ -26,7 +29,7 @@ class Card:
 
     # full name of each face
     faceNames = ("Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten",
-                 "Jack", "Queen", "King")
+                  "Jack", "Queen", "King")
 
     # full name of each suit
     suitNames = ("Clubs", "Spades", "Hearts", "Diamonds")
@@ -151,7 +154,7 @@ class Card:
         faceNum = self._cardNumber % 13
         suitNum = self._cardNumber // 13
         # right justify faceNum+1 in two spaces with leading zero, followed by suit letter and .gif
-        return f"{faceNum + 1:0>2}{Card.suitLetters[suitNum]}.gif"
+        return f"{faceNum+1:0>2}{Card.suitLetters[suitNum]}.gif"
 
     def blackjackValue(self) -> int:
         """
@@ -169,7 +172,6 @@ class Card:
         elif value > 10:
             value = 10
         return value
-
 
 # ----------------------------------------------------------------------
 
@@ -193,7 +195,6 @@ def main():
 
     # c = Card(52)
     # c = Card("Three of Harts")
-
 
 # ----------------------------------------------------------------------
 
